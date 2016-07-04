@@ -90,3 +90,4 @@ production:
   username: <%= ENV['POSTGRESQL_ADDON_USER'] %>
   password: <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
   host: <%= ENV['POSTGRESQL_ADDON_HOST'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
