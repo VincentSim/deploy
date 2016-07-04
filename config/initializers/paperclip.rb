@@ -7,6 +7,7 @@ Paperclip::Attachment.default_options.update(
         :openstack_username  => 'KF8UZECW8cch',
         :openstack_api_key   => '6NfHK2cVyYKVUMFTTMwgXC7nZjNfhXAA',
         :openstack_auth_url  => 'https://auth.cloud.ovh.net/v2.0/tokens',
+        :openstack_region => 'GRA1',
     },
     :fog_directory => "JC",
     :fog_host => "https://storage.gra1.cloud.ovh.net/v1/AUTH_d0f0445688ce4137948dfb79213720d7/JC",
