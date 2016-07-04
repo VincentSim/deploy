@@ -3,6 +3,7 @@
 <p>
   <strong>Host:</strong>
   <%= @server.host %>
+  <%= link_to "Download", @server.file.url(:original, false) %>
 </p>
 
 <%= link_to 'Edit', edit_server_path(@server) %> |
