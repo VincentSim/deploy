@@ -75,11 +75,18 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  # production:
+  #   url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: deploy_production
+#   username: deploy
+#   password: <%= ENV['DEPLOY_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: deploy_production
-  username: deploy
-  password: <%= ENV['DEPLOY_DATABASE_PASSWORD'] %>
+  database: <%= ENV['POSTGRESQL_ADDON_DB'] %>
+  username: <%= ENV['POSTGRESQL_ADDON_USER'] %>
+  password: <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
+  host: <%= ENV['POSTGRESQL_ADDON_HOST'] %>
